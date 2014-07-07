@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *studentButton;
+@property (strong, nonatomic) IBOutlet UIButton *teacherButton;
 
 @end

@@ -21,6 +21,13 @@
 		1270DD701965366B00EDA930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1270DD521965366B00EDA930 /* UIKit.framework */; };
 		1270DD781965366B00EDA930 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1270DD761965366B00EDA930 /* InfoPlist.strings */; };
 		1270DD7A1965366B00EDA930 /* What_Are_You_DoingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1270DD791965366B00EDA930 /* What_Are_You_DoingTests.m */; };
+		1270DD8419653E7700EDA930 /* 3637 Tfel_1061.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1270DD8319653E7700EDA930 /* 3637 Tfel_1061.JPG */; };
+		1270DD8619653EBF00EDA930 /* 3637 Tfel_1112.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1270DD8519653EBF00EDA930 /* 3637 Tfel_1112.JPG */; };
+		1270DD8819653ED000EDA930 /* background-tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 1270DD8719653ED000EDA930 /* background-tile.png */; };
+		12780F9719691B32004364E5 /* lower-third.png in Resources */ = {isa = PBXBuildFile; fileRef = 12780F9619691B32004364E5 /* lower-third.png */; };
+		12780F9919692FE0004364E5 /* Time-Pyramid.png in Resources */ = {isa = PBXBuildFile; fileRef = 12780F9819692FE0004364E5 /* Time-Pyramid.png */; };
+		12780F9D19693177004364E5 /* StudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12780F9C19693177004364E5 /* StudentViewController.m */; };
+		12780FA019693183004364E5 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12780F9F19693183004364E5 /* TeacherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,15 @@
 		1270DD751965366B00EDA930 /* What Are You DoingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "What Are You DoingTests-Info.plist"; sourceTree = "<group>"; };
 		1270DD771965366B00EDA930 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1270DD791965366B00EDA930 /* What_Are_You_DoingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = What_Are_You_DoingTests.m; sourceTree = "<group>"; };
+		1270DD8319653E7700EDA930 /* 3637 Tfel_1061.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3637 Tfel_1061.JPG"; sourceTree = "<group>"; };
+		1270DD8519653EBF00EDA930 /* 3637 Tfel_1112.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3637 Tfel_1112.JPG"; sourceTree = "<group>"; };
+		1270DD8719653ED000EDA930 /* background-tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-tile.png"; sourceTree = "<group>"; };
+		12780F9619691B32004364E5 /* lower-third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lower-third.png"; sourceTree = "<group>"; };
+		12780F9819692FE0004364E5 /* Time-Pyramid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time-Pyramid.png"; sourceTree = "<group>"; };
+		12780F9B19693177004364E5 /* StudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentViewController.h; sourceTree = "<group>"; };
+		12780F9C19693177004364E5 /* StudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentViewController.m; sourceTree = "<group>"; };
+		12780F9E19693183004364E5 /* TeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherViewController.h; sourceTree = "<group>"; };
+		12780F9F19693183004364E5 /* TeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +134,12 @@
 				1270DD631965366B00EDA930 /* ViewController.h */,
 				1270DD641965366B00EDA930 /* ViewController.m */,
 				1270DD661965366B00EDA930 /* Images.xcassets */,
+				12780F9A1969315C004364E5 /* Resources */,
 				1270DD551965366B00EDA930 /* Supporting Files */,
+				12780F9B19693177004364E5 /* StudentViewController.h */,
+				12780F9C19693177004364E5 /* StudentViewController.m */,
+				12780F9E19693183004364E5 /* TeacherViewController.h */,
+				12780F9F19693183004364E5 /* TeacherViewController.m */,
 			);
 			path = "What Are You Doing";
 			sourceTree = "<group>";
@@ -150,6 +171,18 @@
 				1270DD761965366B00EDA930 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12780F9A1969315C004364E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12780F9619691B32004364E5 /* lower-third.png */,
+				1270DD8319653E7700EDA930 /* 3637 Tfel_1061.JPG */,
+				1270DD8519653EBF00EDA930 /* 3637 Tfel_1112.JPG */,
+				12780F9819692FE0004364E5 /* Time-Pyramid.png */,
+				1270DD8719653ED000EDA930 /* background-tile.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +261,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1270DD8619653EBF00EDA930 /* 3637 Tfel_1112.JPG in Resources */,
 				1270DD671965366B00EDA930 /* Images.xcassets in Resources */,
 				1270DD591965366B00EDA930 /* InfoPlist.strings in Resources */,
+				12780F9719691B32004364E5 /* lower-third.png in Resources */,
+				1270DD8819653ED000EDA930 /* background-tile.png in Resources */,
+				12780F9919692FE0004364E5 /* Time-Pyramid.png in Resources */,
+				1270DD8419653E7700EDA930 /* 3637 Tfel_1061.JPG in Resources */,
 				1270DD621965366B00EDA930 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,9 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12780F9D19693177004364E5 /* StudentViewController.m in Sources */,
 				1270DD651965366B00EDA930 /* ViewController.m in Sources */,
 				1270DD5F1965366B00EDA930 /* AppDelegate.m in Sources */,
 				1270DD5B1965366B00EDA930 /* main.m in Sources */,
+				12780FA019693183004364E5 /* TeacherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +498,7 @@
 				1270DD7F1965366B00EDA930 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1270DD801965366B00EDA930 /* Build configuration list for PBXNativeTarget "What Are You DoingTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +507,7 @@
 				1270DD821965366B00EDA930 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
