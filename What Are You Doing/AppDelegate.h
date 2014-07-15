@@ -12,4 +12,22 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// Globals
+
+@property (nonatomic) NSString *lessonCode;
+
+@property (nonatomic) NSString *setupCompleted;
+
+@property (nonatomic) NSString *groupOneText;
+
+@property (nonatomic) NSString *groupTwoText;
+
+@property (nonatomic) NSString *groupThreeText;
+
+@property (nonatomic) NSString *studentIdentification;
+
+// User defaults
+
+@property (nonatomic) NSUserDefaults *userDefaults;
+
 @end

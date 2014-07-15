@@ -8,13 +8,17 @@
 
 #import "StudentViewController.h"
 
+#import "AppDelegate.h"
+
+#define AppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
 @interface StudentViewController ()
 
 @end
 
 @implementation StudentViewController
 
-@synthesize saveButtonReference;
+@synthesize saveButtonReference, descriptorTextOne, descriptorTextThree, descriptorTextTwo, lessonCodeOutlet;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +37,11 @@
     [[saveButtonReference layer] setMasksToBounds:YES];
     [[saveButtonReference layer] setBorderWidth:1.0f];
     [[saveButtonReference layer] setBorderColor:[UIColor orangeColor].CGColor];
+    
+    self.lessonCodeOutlet.text = [NSString stringWithFormat:@"Lesson Code: %@", AppDelegate.lessonCode];
+    self.descriptorTextOne.text = AppDelegate.groupOneText;
+    self.descriptorTextTwo.text = AppDelegate.groupTwoText;
+    self.descriptorTextThree.text = AppDelegate.groupThreeText;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,5 +62,6 @@
 */
 
 - (IBAction)saveButtonPress:(id)sender {
+    
 }
 @end

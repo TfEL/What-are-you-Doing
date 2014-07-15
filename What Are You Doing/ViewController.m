@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
+
+#define AppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 @interface ViewController ()
 
@@ -15,7 +18,7 @@
 
 @implementation ViewController
 
-@synthesize studentButton, teacherButton;
+@synthesize studentButton, teacherButton, teachMeOutlet, startHereText;
 
 - (void)viewDidLoad
 {
@@ -30,6 +33,19 @@
     [[teacherButton layer] setMasksToBounds:YES];
     [[teacherButton layer] setBorderColor:[UIColor orangeColor].CGColor];
     [[teacherButton layer] setBorderWidth:2.0f];
+    
+    [[teachMeOutlet layer] setCornerRadius:8.0f];
+    [[teachMeOutlet layer] setMasksToBounds:YES];
+    [[teachMeOutlet layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[teachMeOutlet layer] setBorderWidth:2.0f];
+    
+    if ([AppDelegate.setupCompleted isEqualToString:@"no"]) {
+        studentButton.hidden = true;
+        startHereText.hidden = false;
+    } else {
+        studentButton.hidden = false;
+        startHereText.hidden = true;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,4 +54,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)exitLessonPress:(id)sender {
+    // Do synchronisation
+    AppDelegate.setupCompleted = @"no";
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"homeView"];
+    [self presentViewController:vc animated:NO completion:nil];
+}
 @end

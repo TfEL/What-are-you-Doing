@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeView" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,26 +18,26 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-Ur-ZPD">
                                 <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="What are you doing?" id="AAn-O8-bp4">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="1BQ-fc-J1B">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="1BQ-fc-J1B">
                                             <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="exitLessonPress:" destination="BYZ-38-t0r" id="OZA-zV-QqM"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am a..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyX-nh-Rv7">
                                 <rect key="frame" x="404" y="215" width="216" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-Je-wbe">
                                 <rect key="frame" x="268" y="320" width="215" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Student">
@@ -45,12 +45,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aue-Cz-6Em" kind="modal" identifier="studentSegue" modalPresentationStyle="fullScreen" animates="NO" id="3MM-wo-Jia"/>
+                                    <segue destination="Jhh-2U-0OZ" kind="modal" id="KoR-kI-D1a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-OW-kcZ">
                                 <rect key="frame" x="541" y="320" width="215" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Teacher">
@@ -63,8 +62,19 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lower-third.png" translatesAutoresizingMaskIntoConstraints="NO" id="PF0-Wv-TPA">
                                 <rect key="frame" x="0.0" y="470" width="1024" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="406" placeholderIntrinsicHeight="147" image="startHere.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-bh-pDP">
+                                <rect key="frame" x="127" y="295" width="406" height="147"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elL-Hl-jPL">
+                                <rect key="frame" x="870" y="675" width="128" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Teach me!">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -72,13 +82,15 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="startHereText" destination="Xn4-bh-pDP" id="xE0-rg-yOR"/>
                         <outlet property="studentButton" destination="L4h-Je-wbe" id="8nh-nu-SX1"/>
+                        <outlet property="teachMeOutlet" destination="elL-Hl-jPL" id="dp8-xx-9Rh"/>
                         <outlet property="teacherButton" destination="jKo-OW-kcZ" id="wLx-n9-0O2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281" y="38"/>
+            <point key="canvasLocation" x="-326" y="60"/>
         </scene>
         <!--Teacher View Controller-->
         <scene sceneID="mMG-Gp-7Jm">
@@ -94,7 +106,6 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6WL-8z-JZ0">
                                 <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -110,18 +121,15 @@
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lower-third.png" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-l9-4Ph">
                                 <rect key="frame" x="0.0" y="470" width="1024" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Teacher." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHr-qF-jsI">
                                 <rect key="frame" x="28" y="92" width="144" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0p-5N-XV7">
                                 <rect key="frame" x="56" y="137" width="912" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -161,19 +169,20 @@
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lesson Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOC-fd-bUj">
                                 <rect key="frame" x="364" y="369" width="297" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="G8G-ij-0ag" id="v4g-CT-3se"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-35-h7U">
                                 <rect key="frame" x="669" y="369" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Setup">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dc9-7U-cul" kind="modal" animates="NO" id="lG1-24-6tL"/>
+                                    <action selector="setupButtonPress:" destination="G8G-ij-0ag" eventType="touchUpInside" id="Aui-jp-pvk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -194,7 +203,7 @@
         <!--Student View Controller-->
         <scene sceneID="DeI-aX-7Sb">
             <objects>
-                <viewController id="aue-Cz-6Em" customClass="StudentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="surveyView" id="aue-Cz-6Em" customClass="StudentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rgr-j8-njm"/>
                         <viewControllerLayoutGuide type="bottom" id="BS0-4z-Pol"/>
@@ -205,7 +214,6 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Am-gF-4Xy">
                                 <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -221,11 +229,9 @@
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="Time-Pyramid.png" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-R6-hN7">
                                 <rect key="frame" x="11" y="74" width="446" height="631"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5cL-6C-sZN">
                                 <rect key="frame" x="492" y="235" width="495" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="A"/>
@@ -240,7 +246,6 @@
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CCi-Gd-dBS">
                                 <rect key="frame" x="492" y="451" width="495" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="A"/>
@@ -255,7 +260,6 @@
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1iQ-Ia-XS5">
                                 <rect key="frame" x="492" y="665" width="495" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="A"/>
@@ -270,7 +274,6 @@
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKe-pV-Ncj">
                                 <rect key="frame" x="492" y="99" width="495" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -278,7 +281,6 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJP-Eh-AXM">
                                 <rect key="frame" x="492" y="310" width="495" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -286,7 +288,6 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ep-uo-kyS">
                                 <rect key="frame" x="492" y="529" width="495" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -294,7 +295,6 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTm-Cc-J9S">
                                 <rect key="frame" x="878" y="713" width="109" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.69411764710000001" green="0.1764705882" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="I'm done!">
                                     <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -307,7 +307,6 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lesson Code: 883c03" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlg-9q-rOQ">
                                 <rect key="frame" x="20" y="727" width="197" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -319,6 +318,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="descriptorTextOne" destination="tKe-pV-Ncj" id="Jnh-Vn-FwB"/>
+                        <outlet property="descriptorTextThree" destination="2ep-uo-kyS" id="QSa-yj-Knx"/>
+                        <outlet property="descriptorTextTwo" destination="mJP-Eh-AXM" id="CWd-fg-NnT"/>
+                        <outlet property="lessonCodeOutlet" destination="jlg-9q-rOQ" id="WHv-a5-kJt"/>
                         <outlet property="saveButtonReference" destination="pTm-Cc-J9S" id="tPC-EP-7qu"/>
                     </connections>
                 </viewController>
@@ -326,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="985" y="533"/>
         </scene>
-        <!--Teacher View Controller-->
+        <!--Teacher View Controller - setupCompleted-->
         <scene sceneID="gFp-lY-27O">
             <objects>
-                <viewController id="dc9-7U-cul" customClass="TeacherViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="setupCompleted" title="setupCompleted" id="dc9-7U-cul" customClass="TeacherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6bd-yH-40D"/>
                         <viewControllerLayoutGuide type="bottom" id="VZu-9e-4LG"/>
@@ -340,7 +343,6 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOe-Ex-BFj">
                                 <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -348,7 +350,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Bxx-Sk-l9d">
                                             <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="flipHorizontal" id="KTw-vn-gB3"/>
+                                                <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="flipHorizontal" animates="NO" id="KTw-vn-gB3"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -356,11 +358,9 @@
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lower-third.png" translatesAutoresizingMaskIntoConstraints="NO" id="wrT-2d-h8q">
                                 <rect key="frame" x="0.0" y="470" width="1024" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup completed sucessfully. Click done to return to the home menu." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-5c-gPy">
                                 <rect key="frame" x="193" y="260" width="639" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -376,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="2152" y="-353"/>
         </scene>
-        <!--Teacher View Controller-->
+        <!--Countdown View Controller-->
         <scene sceneID="wRc-je-eDx">
             <objects>
-                <viewController id="Jhh-2U-0OZ" customClass="TeacherViewController" sceneMemberID="viewController">
+                <viewController id="Jhh-2U-0OZ" customClass="CountdownViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S4F-Lx-7Sc"/>
                         <viewControllerLayoutGuide type="bottom" id="0gD-He-Oge"/>
@@ -390,7 +390,6 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7X-mg-A4A">
                                 <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -398,7 +397,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Ndz-Dp-gWS">
                                             <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="flipHorizontal" id="YpW-Xg-IQk"/>
+                                                <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="flipHorizontal" animates="NO" id="YpW-Xg-IQk"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -406,39 +405,54 @@
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lower-third.png" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-E7-gx3">
                                 <rect key="frame" x="0.0" y="470" width="1024" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unlocks in: %yourinterval%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEI-Za-N72">
-                                <rect key="frame" x="193" y="260" width="639" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEI-Za-N72">
+                                <rect key="frame" x="187" y="214" width="651" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-VX-TkS">
-                                <rect key="frame" x="502" y="214" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-xd-nRa">
-                                <rect key="frame" x="427" y="333" width="170" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.69411764710000001" green="0.1764705882" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="What are you doing?">
-                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveButtonPress:" destination="aue-Cz-6Em" eventType="touchUpInside" id="azI-Aa-1ng"/>
-                                    <segue destination="aue-Cz-6Em" kind="modal" animates="NO" id="ivg-iV-xIW"/>
-                                </connections>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKZ-ZU-3nq">
+                                <rect key="frame" x="515" y="505" width="465" height="98"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">You can do other things while you wait for the next survey time, in fact, that's the whole point!
+
+You can also keep using the iPad, don't worry, you'll get a notification just before you need to take the survey. :)</string>
+                                        <attributes>
+                                            <font key="NSFont" size="13" name=".LucidaGrandeUI"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28.299999237060547"/>
+                                                    <textTab alignment="left" location="56.650001525878906"/>
+                                                    <textTab alignment="left" location="85"/>
+                                                    <textTab alignment="left" location="113.34999847412109"/>
+                                                    <textTab alignment="left" location="141.69999694824219"/>
+                                                    <textTab alignment="left" location="170.05000305175781"/>
+                                                    <textTab alignment="left" location="198.39999389648438"/>
+                                                    <textTab alignment="left" location="226.75"/>
+                                                    <textTab alignment="left" location="255.10000610351562"/>
+                                                    <textTab alignment="left" location="283.45001220703125"/>
+                                                    <textTab alignment="left" location="311.79998779296875"/>
+                                                    <textTab alignment="left" location="340.14999389648438"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="countDownLabel" destination="MEI-Za-N72" id="dcg-4N-VWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFU-7b-cnP" sceneMemberID="firstResponder"/>
             </objects>
@@ -448,6 +462,7 @@
     <resources>
         <image name="Time-Pyramid.png" width="1012" height="1430"/>
         <image name="lower-third.png" width="2048" height="600"/>
+        <image name="startHere.png" width="649" height="236"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -455,7 +470,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="akh-PF-Cpu"/>
-        <segue reference="ivg-iV-xIW"/>
+        <segue reference="YpW-Xg-IQk"/>
+        <segue reference="KoR-kI-D1a"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TeacherViewController : UIViewController
+@interface TeacherViewController : UIViewController <UITextFieldDelegate>
+
 @property (strong, nonatomic) IBOutlet UIButton *setupButtonReference;
 @property (strong, nonatomic) IBOutlet UITextField *codeFieldReference;
+
+- (IBAction)setupButtonPress:(id)sender;
 
 @end
