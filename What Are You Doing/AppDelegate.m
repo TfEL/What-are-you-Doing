@@ -40,7 +40,9 @@
         setupCompleted = [[NSString alloc] init];
         studentIdentification = [[NSString alloc] init];
         
-        [userDefaults setObject:@"0" forKey:@"lastTimerPassed"];
+        NSUInteger lastTimerPassed = 0;
+        
+        [userDefaults setInteger:lastTimerPassed forKey:@"lastTimerPassed"];
         
         NSLog(@"WRUD didn't detect any saved userDefaults: (nil).");
         

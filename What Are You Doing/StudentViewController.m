@@ -149,6 +149,15 @@
                     NSLog(@"Received successfully: %@ : %@", success, message);
                     
                     if ([success isEqualToString:@"success"]) {
+                        
+                        NSUInteger lastTimerPassed = [AppDelegate.userDefaults integerForKey:@"lastTimerPassed"];
+                        
+                        lastTimerPassed++;
+                        
+                        [AppDelegate.userDefaults setInteger:lastTimerPassed forKey:@"lastTimerPassed"];
+                        
+                        NSLog(@"Timer Passed, next timer: %lu", (unsigned long)lastTimerPassed);
+                        
                         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                         UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"countdownView"];
                         [self presentViewController:vc animated:NO completion:nil];

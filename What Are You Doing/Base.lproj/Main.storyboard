@@ -23,10 +23,12 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="What are you doing?" id="AAn-O8-bp4">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="1BQ-fc-J1B">
+                                        <barButtonItem key="rightBarButtonItem" image="glyphicons_136_cogwheel.png" id="1BQ-fc-J1B">
                                             <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="exitLessonPress:" destination="BYZ-38-t0r" id="OZA-zV-QqM"/>
+                                                <segue destination="eCN-qk-fJ4" kind="popover" popoverAnchorBarButtonItem="1BQ-fc-J1B" id="SXy-K1-ggG">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" right="YES"/>
+                                                </segue>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -67,7 +69,7 @@
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="406" placeholderIntrinsicHeight="147" image="startHere.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-bh-pDP">
                                 <rect key="frame" x="127" y="295" width="406" height="147"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elL-Hl-jPL">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elL-Hl-jPL">
                                 <rect key="frame" x="870" y="675" width="128" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,9 +77,6 @@
                                     <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="aue-Cz-6Em" kind="modal" animates="NO" id="jf0-oc-Obl"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -93,67 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-326" y="60"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="CtW-tX-ijR">
-            <objects>
-                <viewController id="7VJ-VC-ltJ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="P1Y-l3-7Ak"/>
-                        <viewControllerLayoutGuide type="bottom" id="FiO-ee-ZOj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2Xc-b4-9jf">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LL_Fade_SPOKE.png" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-cu-kLQ">
-                                <rect key="frame" x="0.0" y="-46" width="651" height="666"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup Spoke Server" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7l-qw-RB6">
-                                <rect key="frame" x="178" y="43" width="185" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csz-PH-TOI">
-                                <rect key="frame" x="77" y="86" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Port" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8y-eq-oNl">
-                                <rect key="frame" x="77" y="161" width="33" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="172.016.010.003 / 8002:6:::1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34Q-Nj-azO">
-                                <rect key="frame" x="77" y="115" width="386" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rVf-VI-w1i">
-                                <rect key="frame" x="77" y="190" width="386" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hc-hT-BLh">
-                                <rect key="frame" x="211" y="255" width="119" height="30"/>
-                                <state key="normal" title="Test Connection">
-                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eIW-JH-HPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="885" y="-1336"/>
+            <point key="canvasLocation" x="-340" y="64"/>
         </scene>
         <!--Teacher View Controller-->
         <scene sceneID="mMG-Gp-7Jm">
@@ -242,27 +181,13 @@
                                 <rect key="frame" x="669" y="369" width="60" height="30"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Setup">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="setupButtonPress:" destination="G8G-ij-0ag" eventType="touchUpInside" id="Aui-jp-pvk"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-pp-EgA">
-                                <rect key="frame" x="189" y="368" width="51" height="31"/>
-                                <color key="onTintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="7VJ-VC-ltJ" kind="popover" popoverAnchorView="1q8-pp-EgA" id="3cy-0k-vsj">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES"/>
-                                    </segue>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intranet Version:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ib-ow-MRb">
-                                <rect key="frame" x="56" y="372" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -545,10 +470,246 @@ You can also keep using the iPad, don't worry, you'll get a notification just be
             </objects>
             <point key="canvasLocation" x="2152" y="533"/>
         </scene>
+        <!--Advanced Settings View Controller-->
+        <scene sceneID="5BP-NM-LJr">
+            <objects>
+                <viewController id="eCN-qk-fJ4" customClass="AdvancedSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wMV-Uh-kMC"/>
+                        <viewControllerLayoutGuide type="bottom" id="J6I-Zf-Qeb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fcn-3B-oKA">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LL_Fade_SPOKE.png" translatesAutoresizingMaskIntoConstraints="NO" id="BoK-3R-2hz">
+                                <rect key="frame" x="0.0" y="-39" width="402" height="414"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advanced Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykS-X7-BAh">
+                                <rect key="frame" x="178" y="43" width="185" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-eG-nb3">
+                                <rect key="frame" x="200" y="126" width="140" height="35"/>
+                                <state key="normal" title="Reset all settings">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAllSettingsPress:" destination="eCN-qk-fJ4" eventType="touchUpInside" id="nii-Q9-iaD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxc-lh-CDe">
+                                <rect key="frame" x="175" y="200" width="190" height="35"/>
+                                <state key="normal" title="Show guide next launch">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showGuideNextPress:" destination="eCN-qk-fJ4" eventType="touchUpInside" id="VwD-A9-MBF"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-Sa-dbu">
+                                <rect key="frame" x="0.0" y="343" width="540" height="277"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Teaching for Effective Learning ‘What are you Doing?’
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">iOS Version .TfEL Research Preview. - Internal Distribution Only
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Getting Started:
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	•	Your teacher needs to register for an account on ‘https://wrud.tfel.edu.au’.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11"/>
+                                                    <textTab alignment="natural" location="36"/>
+                                                    <textTab alignment="left" location="56"/>
+                                                    <textTab alignment="left" location="84"/>
+                                                    <textTab alignment="left" location="112"/>
+                                                    <textTab alignment="left" location="140"/>
+                                                    <textTab alignment="left" location="168"/>
+                                                    <textTab alignment="left" location="196"/>
+                                                    <textTab alignment="left" location="224"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="280"/>
+                                                    <textTab alignment="left" location="308"/>
+                                                    <textTab alignment="left" location="336"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28.299999237060547"/>
+                                                    <textTab alignment="left" location="56"/>
+                                                    <textTab alignment="left" location="84"/>
+                                                    <textTab alignment="left" location="112"/>
+                                                    <textTab alignment="left" location="140"/>
+                                                    <textTab alignment="left" location="168"/>
+                                                    <textTab alignment="left" location="196"/>
+                                                    <textTab alignment="left" location="224"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="280"/>
+                                                    <textTab alignment="left" location="308"/>
+                                                    <textTab alignment="left" location="336"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	•	Once setup, your teacher will work with you to create a set of ‘objectives’.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11"/>
+                                                    <textTab alignment="natural" location="36"/>
+                                                    <textTab alignment="left" location="56"/>
+                                                    <textTab alignment="left" location="84"/>
+                                                    <textTab alignment="left" location="112"/>
+                                                    <textTab alignment="left" location="140"/>
+                                                    <textTab alignment="left" location="168"/>
+                                                    <textTab alignment="left" location="196"/>
+                                                    <textTab alignment="left" location="224"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="280"/>
+                                                    <textTab alignment="left" location="308"/>
+                                                    <textTab alignment="left" location="336"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28.299999237060547"/>
+                                                    <textTab alignment="left" location="56"/>
+                                                    <textTab alignment="left" location="84"/>
+                                                    <textTab alignment="left" location="112"/>
+                                                    <textTab alignment="left" location="140"/>
+                                                    <textTab alignment="left" location="168"/>
+                                                    <textTab alignment="left" location="196"/>
+                                                    <textTab alignment="left" location="224"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="280"/>
+                                                    <textTab alignment="left" location="308"/>
+                                                    <textTab alignment="left" location="336"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	•	Your teacher will then create a code, this code is entered in ’teacher’ mode.
+
+	•	When you’re ready, click ‘Student’ and the class will start.
+
+	•	At random intervals the iPad will alert you to a survey being available.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11"/>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="56"/>
+                                                    <textTab alignment="left" location="84"/>
+                                                    <textTab alignment="left" location="112"/>
+                                                    <textTab alignment="left" location="140"/>
+                                                    <textTab alignment="left" location="168"/>
+                                                    <textTab alignment="left" location="196"/>
+                                                    <textTab alignment="left" location="224"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="280"/>
+                                                    <textTab alignment="left" location="308"/>
+                                                    <textTab alignment="left" location="336"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="172.16.10.1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8NV-Q4-bh5">
+                                <rect key="frame" x="83" y="284" width="161" height="30"/>
+                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDL-Tp-A6p">
+                                <rect key="frame" x="252" y="284" width="97" height="30"/>
+                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-Ct-5uz">
+                                <rect key="frame" x="357" y="284" width="100" height="30"/>
+                                <state key="normal" title="Change API">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeAPIButtonPress:" destination="eCN-qk-fJ4" eventType="touchUpInside" id="gtO-on-D40"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="changeAPIButtonOutlet" destination="UNN-Ct-5uz" id="wmw-RV-2wv"/>
+                        <outlet property="resetAllSettingsOutlet" destination="pbd-eG-nb3" id="Haa-2r-OPR"/>
+                        <outlet property="showGuideNextOutlet" destination="lxc-lh-CDe" id="Rpm-0W-njC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHS-qu-f5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="-922"/>
+        </scene>
     </scenes>
     <resources>
         <image name="LL_Fade_SPOKE.png" width="540" height="620"/>
         <image name="Time-Stripes.png" width="1024" height="768"/>
+        <image name="glyphicons_136_cogwheel.png" width="24" height="24"/>
         <image name="lower-third.png" width="2048" height="600"/>
         <image name="pickOne.png" width="649" height="236"/>
         <image name="startHere.png" width="649" height="236"/>
@@ -562,6 +723,6 @@ You can also keep using the iPad, don't worry, you'll get a notification just be
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YpW-Xg-IQk"/>
+        <segue reference="IRU-nL-eyw"/>
     </inferredMetricsTieBreakers>
 </document>

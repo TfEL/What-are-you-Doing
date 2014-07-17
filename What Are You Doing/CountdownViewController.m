@@ -30,38 +30,50 @@ int touched = 0;
 -(NSString *)whichTimerShouldIUse {
     
     NSString *theTimer;
-    NSString *lastTimer;
+    NSUInteger lastTimer;
     
-    lastTimer = [AppDelegate.userDefaults objectForKey:@"lastTimerPassed"];
+    NSString *theTimerName;
+    
+    lastTimer = [AppDelegate.userDefaults integerForKey:@"lastTimerPassed"];
     
     // Figure out which timer to run – this is NOT intelligent, and needs some work
     
-    if ([lastTimer isEqualToString:@"0"]) {
+    if (lastTimer == 0) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerOne"];
-    } else if ([lastTimer isEqualToString:@"1"]) {
+        theTimerName = @"Timer One";
+    } else if (lastTimer == 1) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerTwo"];
-    } else if ([lastTimer isEqualToString:@"2"]) {
+        theTimerName = @"Timer Two";
+    } else if (lastTimer == 2) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerThree"];
-    } else if ([lastTimer isEqualToString:@"3"]) {
+        theTimerName = @"Timer Three";
+    } else if (lastTimer == 3) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerFour"];
-    } else if ([lastTimer isEqualToString:@"4"]) {
+        theTimerName = @"Timer Four";
+    } else if (lastTimer == 4) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerFive"];
-    } else if ([lastTimer isEqualToString:@"5"]) {
+        theTimerName = @"Timer Five";
+    } else if (lastTimer == 5) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerSix"];
-    } else if ([lastTimer isEqualToString:@"6"]) {
+        theTimerName = @"Timer Six";
+    } else if (lastTimer == 6) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerSeven"];
-    } else if ([lastTimer isEqualToString:@"7"]) {
+        theTimerName = @"Timer Seven";
+    } else if (lastTimer == 7) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerEight"];
-    } else if ([lastTimer isEqualToString:@"8"]) {
+        theTimerName = @"Timer Eight";
+    } else if (lastTimer == 8) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerNine"];
-    } else if ([lastTimer isEqualToString:@"9"]) {
+        theTimerName = @"Timer Nine";
+    } else if (lastTimer == 9) {
         theTimer = [AppDelegate.userDefaults objectForKey:@"TimerTen"];
+        theTimerName = @"Timer Ten";
     } else {
         UIAlertView *error = [[UIAlertView init]  initWithTitle:@"Uh oh!" message:@"There are no timers in the future, your teacher might need to set up this iPad again." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
         [error show];
     }
     
-    NSLog(@"The timer being used... %@", theTimer);
+    NSLog(@"%@", theTimerName);
     
     return theTimer;
 }
@@ -84,21 +96,19 @@ int touched = 0;
     nowDate = [NSDate date];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    dateFormatter.DateFormat = @"yyyy-MM-dd HH:mm:ss Z";
+    dateFormatter.DateFormat = @"yyyy-MM-dd HH:mm:ss";
     dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"Adelaide/Australia"];
+    
     futureDate = [dateFormatter dateFromString:futureDateString];
     
     rightNowString = [dateFormatter stringFromDate:nowDate];
+    
     nowDate = [dateFormatter dateFromString:rightNowString];
     
     long elapsedSeconds = [futureDate timeIntervalSinceDate:nowDate];
     
-    // NSInteger seconds = elapsedSeconds % 60;
-    // NSInteger minutes = (elapsedSeconds / 60) % 60;
-    // NSInteger hours = elapsedSeconds / (60 * 60);
+    NSLog(@"Received new compare, %@ : %@. Handing back %ld seconds.", futureDate, nowDate, elapsedSeconds);
     
-    // NSString *result= [NSString stringWithFormat:@"%02ld:%02ld:%02ld", (long)hours, (long)minutes, (long)seconds];
-
     return elapsedSeconds;
 }
 
@@ -108,41 +118,36 @@ int touched = 0;
     futureDateString = dateIn;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    dateFormatter.DateFormat = @"yyyy-MM-dd HH:mm:ss Z";
+    dateFormatter.DateFormat = @"yyyy-MM-dd HH:mm:ss";
     dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"Adelaide/Australia"];
     
     return [dateFormatter dateFromString:futureDateString];
 }
 
-- (void)updateCounter:(NSString *)theTimer {
+- (void)updateCounter: (NSTimer *)timerData {
+    NSString *theTimer = [self whichTimerShouldIUse];
+    secondsLeft = [self compareTimeUntilTimer:theTimer];
 
-    NSLog(@"I'm about to die ungracefully. %@", theTimer);
-    
-    if(secondsLeft > 0 ){
-        secondsLeft -- ;
-        hours = secondsLeft / 3600;
-        minutes = (secondsLeft % 3600) / 60;
-        seconds = (secondsLeft %3600) % 60;
-        countDownLabel.text = [NSString stringWithFormat:@"Unlocks in %02d:%02d", minutes, seconds];
-    }
-    else{
-        NSLog(@"Reached 0");
-        touched ++;
-        if (touched == 2) {
-            NSLog(@"..");
-            [timer fire];
-        } else {
-            secondsLeft = [self compareTimeUntilTimer:theTimer];
-        }
-    }
+    secondsLeft -- ;
+    hours = secondsLeft / 3600;
+    minutes = (secondsLeft % 3600) / 60;
+    seconds = (secondsLeft %3600) % 60;
+    countDownLabel.text = [NSString stringWithFormat:@"Unlocks in %02d:%02d", minutes, seconds];
 }
 
--(void)countdownTimer{
-    NSString *theTimer = [self whichTimerShouldIUse];
-    
+-(void)countdownTimer {
     secondsLeft = hours = minutes = seconds = 0;
     if([timer isValid]) { }
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:theTimer repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
+    
+    /* NSLog(@"Reached 0");
+    touched ++;
+    if (touched == 2) {
+        NSLog(@"..");
+        [timer fire];
+    } else {
+        secondsLeft = [self compareTimeUntilTimer:theTimer];
+    } */
 }
 
 
@@ -160,13 +165,15 @@ int touched = 0;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-    
     NSString *theTimer = [self whichTimerShouldIUse];
     
+    NSDate *theTimerAsDate = [self compareTimeUntilTimerWithDate:theTimer];
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = [self compareTimeUntilTimerWithDate:theTimer];
+    localNotification.fireDate = theTimerAsDate;
     localNotification.alertBody = [NSString stringWithFormat:@"Time to take a survey. Touch here to come back to What are you Doing."];
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    [timer invalidate];
     [timer fire];
 }
 

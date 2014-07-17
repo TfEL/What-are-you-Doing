@@ -56,10 +56,5 @@
 
 - (IBAction)exitLessonPress:(id)sender {
     // Do synchronisation
-    AppDelegate.setupCompleted = @"no";
-    
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"homeView"];
-    [self presentViewController:vc animated:NO completion:nil];
 }
 @end
