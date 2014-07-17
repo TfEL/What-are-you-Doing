@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -74,10 +75,12 @@
                                     <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="aue-Cz-6Em" kind="modal" animates="NO" id="jf0-oc-Obl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -91,6 +94,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-326" y="60"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CtW-tX-ijR">
+            <objects>
+                <viewController id="7VJ-VC-ltJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P1Y-l3-7Ak"/>
+                        <viewControllerLayoutGuide type="bottom" id="FiO-ee-ZOj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Xc-b4-9jf">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LL_Fade_SPOKE.png" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-cu-kLQ">
+                                <rect key="frame" x="0.0" y="-46" width="651" height="666"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup Spoke Server" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7l-qw-RB6">
+                                <rect key="frame" x="178" y="43" width="185" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csz-PH-TOI">
+                                <rect key="frame" x="77" y="86" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Port" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8y-eq-oNl">
+                                <rect key="frame" x="77" y="161" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="172.016.010.003 / 8002:6:::1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34Q-Nj-azO">
+                                <rect key="frame" x="77" y="115" width="386" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rVf-VI-w1i">
+                                <rect key="frame" x="77" y="190" width="386" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hc-hT-BLh">
+                                <rect key="frame" x="211" y="255" width="119" height="30"/>
+                                <state key="normal" title="Test Connection">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIW-JH-HPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="-1336"/>
         </scene>
         <!--Teacher View Controller-->
         <scene sceneID="mMG-Gp-7Jm">
@@ -185,9 +248,23 @@
                                     <action selector="setupButtonPress:" destination="G8G-ij-0ag" eventType="touchUpInside" id="Aui-jp-pvk"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-pp-EgA">
+                                <rect key="frame" x="189" y="368" width="51" height="31"/>
+                                <color key="onTintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="7VJ-VC-ltJ" kind="popover" popoverAnchorView="1q8-pp-EgA" id="3cy-0k-vsj">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES"/>
+                                    </segue>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intranet Version:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ib-ow-MRb">
+                                <rect key="frame" x="56" y="372" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -212,8 +289,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="Time-Stripes.png" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-R6-hN7">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Am-gF-4Xy">
                                 <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -227,13 +308,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="Time-Pyramid.png" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-R6-hN7">
-                                <rect key="frame" x="11" y="74" width="446" height="631"/>
-                            </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5cL-6C-sZN">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="5cL-6C-sZN">
                                 <rect key="frame" x="492" y="235" width="495" height="29"/>
                                 <segments>
-                                    <segment title="None"/>
                                     <segment title="A"/>
                                     <segment title="B"/>
                                     <segment title="C"/>
@@ -243,11 +320,13 @@
                                     <segment title="G"/>
                                 </segments>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentOneTouch:" destination="aue-Cz-6Em" eventType="valueChanged" id="s2O-2b-NXM"/>
+                                </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CCi-Gd-dBS">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="CCi-Gd-dBS">
                                 <rect key="frame" x="492" y="451" width="495" height="29"/>
                                 <segments>
-                                    <segment title="None"/>
                                     <segment title="A"/>
                                     <segment title="B"/>
                                     <segment title="C"/>
@@ -257,11 +336,13 @@
                                     <segment title="G"/>
                                 </segments>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentTwoTouch:" destination="aue-Cz-6Em" eventType="valueChanged" id="SBS-bR-RnA"/>
+                                </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1iQ-Ia-XS5">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="1iQ-Ia-XS5">
                                 <rect key="frame" x="492" y="665" width="495" height="29"/>
                                 <segments>
-                                    <segment title="None"/>
                                     <segment title="A"/>
                                     <segment title="B"/>
                                     <segment title="C"/>
@@ -271,22 +352,25 @@
                                     <segment title="G"/>
                                 </segments>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentThreeTouch:" destination="aue-Cz-6Em" eventType="valueChanged" id="yF1-z9-vt9"/>
+                                </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKe-pV-Ncj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKe-pV-Ncj">
                                 <rect key="frame" x="492" y="99" width="495" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJP-Eh-AXM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJP-Eh-AXM">
                                 <rect key="frame" x="492" y="310" width="495" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ep-uo-kyS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ep-uo-kyS">
                                 <rect key="frame" x="492" y="529" width="495" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -302,7 +386,6 @@
                                 </state>
                                 <connections>
                                     <action selector="saveButtonPress:" destination="aue-Cz-6Em" eventType="touchUpInside" id="Ac1-32-kdi"/>
-                                    <segue destination="Jhh-2U-0OZ" kind="modal" animates="NO" id="TOY-wk-EkW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lesson Code: 883c03" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlg-9q-rOQ">
@@ -311,9 +394,11 @@
                                 <color key="textColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="406" placeholderIntrinsicHeight="147" image="pickOne.png" translatesAutoresizingMaskIntoConstraints="NO" id="aze-i7-2Jx">
+                                <rect key="frame" x="78" y="175" width="406" height="147"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -321,15 +406,19 @@
                         <outlet property="descriptorTextOne" destination="tKe-pV-Ncj" id="Jnh-Vn-FwB"/>
                         <outlet property="descriptorTextThree" destination="2ep-uo-kyS" id="QSa-yj-Knx"/>
                         <outlet property="descriptorTextTwo" destination="mJP-Eh-AXM" id="CWd-fg-NnT"/>
+                        <outlet property="helpView" destination="aze-i7-2Jx" id="WVA-tQ-zQ2"/>
                         <outlet property="lessonCodeOutlet" destination="jlg-9q-rOQ" id="WHv-a5-kJt"/>
                         <outlet property="saveButtonReference" destination="pTm-Cc-J9S" id="tPC-EP-7qu"/>
+                        <outlet property="segmentOne" destination="5cL-6C-sZN" id="ZWW-tv-zrF"/>
+                        <outlet property="segmentThree" destination="1iQ-Ia-XS5" id="rHt-2b-5MA"/>
+                        <outlet property="segmentTwo" destination="CCi-Gd-dBS" id="Fgi-Kt-bIk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oi3-qF-59V" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="985" y="533"/>
         </scene>
-        <!--Teacher View Controller - setupCompleted-->
+        <!--setupCompleted-->
         <scene sceneID="gFp-lY-27O">
             <objects>
                 <viewController storyboardIdentifier="setupCompleted" title="setupCompleted" id="dc9-7U-cul" customClass="TeacherViewController" sceneMemberID="viewController">
@@ -367,7 +456,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -379,7 +467,7 @@
         <!--Countdown View Controller-->
         <scene sceneID="wRc-je-eDx">
             <objects>
-                <viewController id="Jhh-2U-0OZ" customClass="CountdownViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="countdownView" id="Jhh-2U-0OZ" customClass="CountdownViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S4F-Lx-7Sc"/>
                         <viewControllerLayoutGuide type="bottom" id="0gD-He-Oge"/>
@@ -446,7 +534,6 @@ You can also keep using the iPad, don't worry, you'll get a notification just be
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -460,17 +547,21 @@ You can also keep using the iPad, don't worry, you'll get a notification just be
         </scene>
     </scenes>
     <resources>
-        <image name="Time-Pyramid.png" width="1012" height="1430"/>
+        <image name="LL_Fade_SPOKE.png" width="540" height="620"/>
+        <image name="Time-Stripes.png" width="1024" height="768"/>
         <image name="lower-third.png" width="2048" height="600"/>
+        <image name="pickOne.png" width="649" height="236"/>
         <image name="startHere.png" width="649" height="236"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="768" height="1024"/>
+            <size key="landscapeSize" width="1024" height="768"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="YpW-Xg-IQk"/>
-        <segue reference="KoR-kI-D1a"/>
     </inferredMetricsTieBreakers>
 </document>

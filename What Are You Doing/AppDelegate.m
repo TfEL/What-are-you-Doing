@@ -10,7 +10,7 @@
 
 @implementation AppDelegate
 
-@synthesize userDefaults, lessonCode, studentIdentification, setupCompleted, groupOneText, groupTwoText, groupThreeText;
+@synthesize apiBaseURL, userDefaults, lessonCode, studentIdentification, setupCompleted, groupOneText, groupTwoText, groupThreeText;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -24,8 +24,13 @@
     // Sync defaults
     [userDefaults synchronize];
     
+    // Reset helpview
+    self.studentHasSeenHelp = false;
+    
+    self.apiBaseURL = @"https://wrud.tfel.edu.au/api/";
+    
     // Confirm local notifcations (iOS 8)
-    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    //[application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     
     if ([userDefaults objectForKey:@"classCode"] == nil) {
         lessonCode = [[NSString alloc] init];

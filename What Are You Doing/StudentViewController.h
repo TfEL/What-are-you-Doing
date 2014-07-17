@@ -18,5 +18,15 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *lessonCodeOutlet;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentOne;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentTwo;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentThree;
+
+- (IBAction)segmentOneTouch:(id)sender;
+- (IBAction)segmentTwoTouch:(id)sender;
+- (IBAction)segmentThreeTouch:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIImageView *helpView;
+
 - (IBAction)saveButtonPress:(id)sender;
 @end

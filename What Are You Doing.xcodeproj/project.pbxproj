@@ -30,6 +30,9 @@
 		12780F9D19693177004364E5 /* StudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12780F9C19693177004364E5 /* StudentViewController.m */; };
 		12780FA019693183004364E5 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12780F9F19693183004364E5 /* TeacherViewController.m */; };
 		12C5D1A5196FC0E20031CD80 /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C5D1A4196FC0E20031CD80 /* CountdownViewController.m */; };
+		12F026C5197750AF006ACD16 /* pickOne@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F026C4197750AF006ACD16 /* pickOne@2x.png */; };
+		12F026D6197758F4006ACD16 /* Time-Stripes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F026D5197758F4006ACD16 /* Time-Stripes@2x.png */; };
+		12F026D819776173006ACD16 /* LL_Fade_SPOKE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F026D719776173006ACD16 /* LL_Fade_SPOKE@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		12780F9F19693183004364E5 /* TeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
 		12C5D1A3196FC0E20031CD80 /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownViewController.h; sourceTree = "<group>"; };
 		12C5D1A4196FC0E20031CD80 /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownViewController.m; sourceTree = "<group>"; };
+		12F026C4197750AF006ACD16 /* pickOne@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pickOne@2x.png"; sourceTree = "<group>"; };
+		12F026D5197758F4006ACD16 /* Time-Stripes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time-Stripes@2x.png"; sourceTree = "<group>"; };
+		12F026D719776173006ACD16 /* LL_Fade_SPOKE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LL_Fade_SPOKE@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +205,9 @@
 		12780F9A1969315C004364E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12F026D719776173006ACD16 /* LL_Fade_SPOKE@2x.png */,
+				12F026D5197758F4006ACD16 /* Time-Stripes@2x.png */,
+				12F026C4197750AF006ACD16 /* pickOne@2x.png */,
 				1253F20F196BBEFD00E4C7E0 /* startHere@2x.png */,
 				12780F9619691B32004364E5 /* lower-third.png */,
 				1270DD8319653E7700EDA930 /* 3637 Tfel_1061.JPG */,
@@ -291,7 +300,10 @@
 				1270DD591965366B00EDA930 /* InfoPlist.strings in Resources */,
 				12780F9719691B32004364E5 /* lower-third.png in Resources */,
 				1270DD8819653ED000EDA930 /* background-tile.png in Resources */,
+				12F026C5197750AF006ACD16 /* pickOne@2x.png in Resources */,
+				12F026D6197758F4006ACD16 /* Time-Stripes@2x.png in Resources */,
 				12780F9919692FE0004364E5 /* Time-Pyramid.png in Resources */,
+				12F026D819776173006ACD16 /* LL_Fade_SPOKE@2x.png in Resources */,
 				1270DD8419653E7700EDA930 /* 3637 Tfel_1061.JPG in Resources */,
 				1270DD621965366B00EDA930 /* Main.storyboard in Resources */,
 			);

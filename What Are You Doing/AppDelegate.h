@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// API Base
+
+@property (nonatomic) NSString *apiBaseURL;
+
 // Globals
 
 @property (nonatomic) NSString *lessonCode;
@@ -29,5 +33,8 @@
 // User defaults
 
 @property (nonatomic) NSUserDefaults *userDefaults;
+
+// Disposable Variable
+@property (nonatomic) bool *studentHasSeenHelp;
 
 @end
