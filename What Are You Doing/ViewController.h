@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIButton *studentButton;
 @property (strong, nonatomic) IBOutlet UIButton *teacherButton;
 @property (strong, nonatomic) IBOutlet UIImageView *startHereText;
 @property (strong, nonatomic) IBOutlet UIButton *teachMeOutlet;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *padlockButtonOutlet;
 
-- (IBAction)exitLessonPress:(id)sender;
+- (IBAction)padlockButton:(id)sender;
 
 @end

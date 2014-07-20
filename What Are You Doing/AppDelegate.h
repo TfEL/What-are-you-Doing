@@ -34,7 +34,13 @@
 
 @property (nonatomic) NSUserDefaults *userDefaults;
 
-// Disposable Variable
+// Disposable Variables
 @property (nonatomic) bool *studentHasSeenHelp;
+
+@property (nonatomic) bool *countdownViewHasUnloaded;
+
+@property (nonatomic) bool *countdownViewHasLoaded;
+
+@property (nonatomic) bool *isLocked;
 
 @end

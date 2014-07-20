@@ -18,7 +18,7 @@
 
 @implementation ViewController
 
-@synthesize studentButton, teacherButton, teachMeOutlet, startHereText;
+@synthesize padlockButtonOutlet, studentButton, teacherButton, teachMeOutlet, startHereText;
 
 - (void)viewDidLoad
 {
@@ -26,22 +26,23 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [[studentButton layer] setCornerRadius:8.0f];
     [[studentButton layer] setMasksToBounds:YES];
-    [[studentButton layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[studentButton layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[studentButton layer] setBorderWidth:2.0f];
     
     [[teacherButton layer] setCornerRadius:8.0f];
     [[teacherButton layer] setMasksToBounds:YES];
-    [[teacherButton layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[teacherButton layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[teacherButton layer] setBorderWidth:2.0f];
     
     [[teachMeOutlet layer] setCornerRadius:8.0f];
     [[teachMeOutlet layer] setMasksToBounds:YES];
-    [[teachMeOutlet layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[teachMeOutlet layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[teachMeOutlet layer] setBorderWidth:2.0f];
     
     if ([AppDelegate.setupCompleted isEqualToString:@"no"]) {
         studentButton.hidden = true;
         startHereText.hidden = false;
+        padlockButtonOutlet.enabled = false;
     } else {
         studentButton.hidden = false;
         startHereText.hidden = true;
@@ -53,8 +54,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)exitLessonPress:(id)sender {
-    // Do synchronisation
+- (IBAction)padlockButton:(id)sender {
+    if (AppDelegate.isLocked == (bool*)true) {
+        AppDelegate.isLocked = (bool*)false;
+        teacherButton.enabled = true;
+        teacherButton.hidden = false;
+    } else {
+        AppDelegate.isLocked = (bool*)true;
+        teacherButton.enabled = false;
+        teacherButton.hidden = true;
+    }
+    
 }
 @end

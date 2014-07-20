@@ -37,7 +37,7 @@
     [[setupButtonReference layer] setCornerRadius:8.0f];
     [[setupButtonReference layer] setMasksToBounds:YES];
     [[setupButtonReference layer] setBorderWidth:1.0f];
-    [[setupButtonReference layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[setupButtonReference layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     
     [codeFieldReference becomeFirstResponder];
 }

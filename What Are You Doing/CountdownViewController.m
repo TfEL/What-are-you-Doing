@@ -109,6 +109,10 @@ int touched = 0;
     
     NSLog(@"Received new compare, %@ : %@. Handing back %ld seconds.", futureDate, nowDate, elapsedSeconds);
     
+    // View has loaded, but it hasn't UNLOADED
+    AppDelegate.countdownViewHasLoaded = (bool*)YES;
+    AppDelegate.countdownViewHasUnloaded = (bool *)NO;
+    
     return elapsedSeconds;
 }
 
@@ -150,7 +154,6 @@ int touched = 0;
     } */
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -172,6 +175,10 @@ int touched = 0;
     localNotification.fireDate = theTimerAsDate;
     localNotification.alertBody = [NSString stringWithFormat:@"Time to take a survey. Touch here to come back to What are you Doing."];
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    // View has loaded, then been unloaded. :)
+    AppDelegate.countdownViewHasLoaded = (bool*)NO;
+    AppDelegate.countdownViewHasUnloaded = (bool *)YES;
     
     [timer invalidate];
     [timer fire];

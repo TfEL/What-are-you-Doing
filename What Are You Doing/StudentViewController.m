@@ -36,7 +36,7 @@
     [[saveButtonReference layer] setCornerRadius:8.0f];
     [[saveButtonReference layer] setMasksToBounds:YES];
     [[saveButtonReference layer] setBorderWidth:1.0f];
-    [[saveButtonReference layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[saveButtonReference layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     
     self.lessonCodeOutlet.text = [NSString stringWithFormat:@"Lesson Code: %@", AppDelegate.lessonCode];
     self.descriptorTextOne.text = AppDelegate.groupOneText;

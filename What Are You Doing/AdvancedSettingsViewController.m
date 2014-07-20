@@ -25,19 +25,19 @@
     
     [[resetAllSettingsOutlet layer] setCornerRadius:8.0f];
     [[resetAllSettingsOutlet layer] setMasksToBounds:YES];
-    [[resetAllSettingsOutlet layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[resetAllSettingsOutlet layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[resetAllSettingsOutlet layer] setBackgroundColor:[UIColor whiteColor].CGColor];
     [[resetAllSettingsOutlet layer] setBorderWidth:1.0f];
     
     [[showGuideNextOutlet layer] setCornerRadius:8.0f];
     [[showGuideNextOutlet layer] setMasksToBounds:YES];
-    [[showGuideNextOutlet layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[showGuideNextOutlet layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[showGuideNextOutlet layer] setBackgroundColor:[UIColor whiteColor].CGColor];
     [[showGuideNextOutlet layer] setBorderWidth:1.0f];
     
     [[changeAPIButtonOutlet layer] setCornerRadius:8.0f];
     [[changeAPIButtonOutlet layer] setMasksToBounds:YES];
-    [[changeAPIButtonOutlet layer] setBorderColor:[UIColor orangeColor].CGColor];
+    [[changeAPIButtonOutlet layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[changeAPIButtonOutlet layer] setBackgroundColor:[UIColor whiteColor].CGColor];
     [[changeAPIButtonOutlet layer] setBorderWidth:1.0f];
 }
