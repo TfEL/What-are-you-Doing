@@ -18,7 +18,7 @@
 
 @implementation ViewController
 
-@synthesize padlockButtonOutlet, studentButton, teacherButton, teachMeOutlet, startHereText;
+@synthesize padlockButtonOutlet, studentButton;
 
 - (void)viewDidLoad
 {
@@ -28,25 +28,6 @@
     [[studentButton layer] setMasksToBounds:YES];
     [[studentButton layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[studentButton layer] setBorderWidth:2.0f];
-    
-    [[teacherButton layer] setCornerRadius:8.0f];
-    [[teacherButton layer] setMasksToBounds:YES];
-    [[teacherButton layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
-    [[teacherButton layer] setBorderWidth:2.0f];
-    
-    [[teachMeOutlet layer] setCornerRadius:8.0f];
-    [[teachMeOutlet layer] setMasksToBounds:YES];
-    [[teachMeOutlet layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
-    [[teachMeOutlet layer] setBorderWidth:2.0f];
-    
-    if ([AppDelegate.setupCompleted isEqualToString:@"no"]) {
-        studentButton.hidden = true;
-        startHereText.hidden = false;
-        padlockButtonOutlet.enabled = false;
-    } else {
-        studentButton.hidden = false;
-        startHereText.hidden = true;
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +36,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)padlockButton:(id)sender {
-    if (AppDelegate.isLocked == (bool*)true) {
+   /*  if (AppDelegate.isLocked == (bool*)true) {
         AppDelegate.isLocked = (bool*)false;
         teacherButton.enabled = true;
         teacherButton.hidden = false;
@@ -63,7 +44,6 @@
         AppDelegate.isLocked = (bool*)true;
         teacherButton.enabled = false;
         teacherButton.hidden = true;
-    }
-    
+    } */
 }
 @end

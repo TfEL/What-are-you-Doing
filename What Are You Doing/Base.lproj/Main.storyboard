@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="HCX-TM-HBz">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
@@ -23,57 +23,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="WhatRUDoingBanner.png" translatesAutoresizingMaskIntoConstraints="NO" id="MGP-hq-jMx">
                                 <rect key="frame" x="20" y="650" width="386" height="95"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="406" placeholderIntrinsicHeight="147" image="startHere.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-bh-pDP">
-                                <rect key="frame" x="127" y="295" width="406" height="147"/>
-                                <color key="tintColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-OW-kcZ">
-                                <rect key="frame" x="541" y="320" width="215" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Teacher">
-                                    <color key="titleColor" red="0.50196078431372548" green="0.792156862745098" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="G8G-ij-0ag" kind="modal" identifier="teacherSegue" modalPresentationStyle="fullScreen" animates="NO" id="bEO-Hy-xsN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-Je-wbe">
-                                <rect key="frame" x="268" y="320" width="215" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Student">
-                                    <color key="titleColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Jhh-2U-0OZ" kind="modal" id="KoR-kI-D1a"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am a..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyX-nh-Rv7">
-                                <rect key="frame" x="404" y="215" width="216" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-Ur-ZPD">
                                 <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="What are you doing?" id="AAn-O8-bp4">
-                                        <barButtonItem key="leftBarButtonItem" image="glyphicons_203_lock.png" id="8HL-iG-gXw">
+                                        <barButtonItem key="leftBarButtonItem" image="glyphicons_136_cogwheel.png" id="8HL-iG-gXw">
                                             <color key="tintColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="padlockButton:" destination="BYZ-38-t0r" id="Tpd-j9-Hn6"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="glyphicons_136_cogwheel.png" id="1BQ-fc-J1B">
-                                            <color key="tintColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="eCN-qk-fJ4" kind="popover" popoverAnchorBarButtonItem="1BQ-fc-J1B" id="SXy-K1-ggG">
-                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" right="YES"/>
-                                                </segue>
+                                                <segue destination="HCX-TM-HBz" kind="modal" animates="NO" id="fxe-B9-3HU"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -91,6 +50,18 @@
                                     <segue destination="aue-Cz-6Em" kind="modal" animates="NO" id="IVI-zO-fLo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-Je-wbe">
+                                <rect key="frame" x="332" y="296" width="361" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start Counting!">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jhh-2U-0OZ" kind="modal" id="KoR-kI-D1a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -98,10 +69,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="padlockButtonOutlet" destination="8HL-iG-gXw" id="pZm-1S-YQk"/>
-                        <outlet property="startHereText" destination="Xn4-bh-pDP" id="xE0-rg-yOR"/>
                         <outlet property="studentButton" destination="L4h-Je-wbe" id="8nh-nu-SX1"/>
                         <outlet property="teachMeOutlet" destination="elL-Hl-jPL" id="dp8-xx-9Rh"/>
-                        <outlet property="teacherButton" destination="jKo-OW-kcZ" id="wLx-n9-0O2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,11 +94,11 @@
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <navigationItem title="Teacher" id="Vaq-EM-KcU">
+                                    <navigationItem title="Set Up ‘What are you Doing?’" id="Vaq-EM-KcU">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="eGz-YO-zvf">
                                             <color key="tintColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="modal" animates="NO" id="IRU-nL-eyw"/>
+                                                <segue destination="HCX-TM-HBz" kind="modal" animates="NO" id="pQ1-I4-2NL"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QCt-om-Lu1">
@@ -144,26 +113,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-l9-4Ph">
                                 <rect key="frame" x="0.0" y="714" width="1024" height="60"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Teacher." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHr-qF-jsI">
-                                <rect key="frame" x="28" y="92" width="144" height="28"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to What are you Doing?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHr-qF-jsI">
+                                <rect key="frame" x="28" y="92" width="350" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0p-5N-XV7">
-                                <rect key="frame" x="56" y="137" width="912" height="158"/>
+                                <rect key="frame" x="28" y="137" width="400" height="115"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">1. Head to https://what-are-you-doing.tfel.edu.au
-2. Create an account, or log in to an existing account
-3. Get a code from the ‘new class’ menu, or, retrieve an existing code from ‘existing class’
-4. Copy the code into the field below, and tap ‘setup’
-5. Tap ‘done’ and the app will return to the home menu
-6. Hand this iPad to a student, get them to tap ‘student’
-7. At your selected intervals, the app will send a push notification bringing up the ‘what are you doing’ input screen
-8. Head back to https://what-are-you-doing.tfel.edu.au and view the results
-9. Repeat!</string>
+                                        <string key="content">Students:
+
+1. Your teacher will give you a lesson code
+2. Enter the code in the box below, then tap Setup
+3. Once setup, you will receive a notification when it's time to fill in the survey.</string>
                                         <attributes>
                                             <font key="NSFont" size="13" name=".LucidaGrandeUI"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
@@ -189,7 +154,7 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lesson Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOC-fd-bUj">
-                                <rect key="frame" x="364" y="369" width="297" height="30"/>
+                                <rect key="frame" x="330" y="286" width="297" height="30"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
@@ -198,7 +163,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-35-h7U">
-                                <rect key="frame" x="669" y="369" width="60" height="30"/>
+                                <rect key="frame" x="635" y="286" width="60" height="30"/>
                                 <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Setup">
                                     <color key="titleColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,6 +173,83 @@
                                     <action selector="setupButtonPress:" destination="G8G-ij-0ag" eventType="touchUpInside" id="Aui-jp-pvk"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-jl-FDH">
+                                <rect key="frame" x="604" y="137" width="400" height="117"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Teachers:
+
+1. </string>
+                                        <attributes>
+                                            <font key="NSFont" size="13" name=".LucidaGrandeUI"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28.299999237060547"/>
+                                                    <textTab alignment="left" location="56.650001525878906"/>
+                                                    <textTab alignment="left" location="85"/>
+                                                    <textTab alignment="left" location="113.34999847412109"/>
+                                                    <textTab alignment="left" location="141.69999694824219"/>
+                                                    <textTab alignment="left" location="170.05000305175781"/>
+                                                    <textTab alignment="left" location="198.39999389648438"/>
+                                                    <textTab alignment="left" location="226.75"/>
+                                                    <textTab alignment="left" location="255.10000610351562"/>
+                                                    <textTab alignment="left" location="283.45001220703125"/>
+                                                    <textTab alignment="left" location="311.79998779296875"/>
+                                                    <textTab alignment="left" location="340.14999389648438"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Go to https://wrud.tfel.edu.au to begin (or press the + above)">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="LucidaGrande"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28.299999237060547"/>
+                                                    <textTab alignment="left" location="56.650001525878906"/>
+                                                    <textTab alignment="left" location="85"/>
+                                                    <textTab alignment="left" location="113.34999847412109"/>
+                                                    <textTab alignment="left" location="141.69999694824219"/>
+                                                    <textTab alignment="left" location="170.05000305175781"/>
+                                                    <textTab alignment="left" location="198.39999389648438"/>
+                                                    <textTab alignment="left" location="226.75"/>
+                                                    <textTab alignment="left" location="255.10000610351562"/>
+                                                    <textTab alignment="left" location="283.45001220703125"/>
+                                                    <textTab alignment="left" location="311.79998779296875"/>
+                                                    <textTab alignment="left" location="340.14999389648438"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+2. Setup your account, and create a class
+3. Give your students the code! </string>
+                                        <attributes>
+                                            <font key="NSFont" size="13" name=".LucidaGrandeUI"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28.299999237060547"/>
+                                                    <textTab alignment="left" location="56.650001525878906"/>
+                                                    <textTab alignment="left" location="85"/>
+                                                    <textTab alignment="left" location="113.34999847412109"/>
+                                                    <textTab alignment="left" location="141.69999694824219"/>
+                                                    <textTab alignment="left" location="170.05000305175781"/>
+                                                    <textTab alignment="left" location="198.39999389648438"/>
+                                                    <textTab alignment="left" location="226.75"/>
+                                                    <textTab alignment="left" location="255.10000610351562"/>
+                                                    <textTab alignment="left" location="283.45001220703125"/>
+                                                    <textTab alignment="left" location="311.79998779296875"/>
+                                                    <textTab alignment="left" location="340.14999389648438"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -444,8 +486,11 @@ Tap done to return to the home menu.</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-E7-gx3">
+                                <rect key="frame" x="0.0" y="708" width="1024" height="60"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKZ-ZU-3nq">
-                                <rect key="frame" x="515" y="505" width="465" height="98"/>
+                                <rect key="frame" x="66" y="544" width="465" height="98"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -476,9 +521,6 @@ You can also keep using the iPad, don't worry, you'll get a notification just be
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-E7-gx3">
-                                <rect key="frame" x="0.0" y="708" width="1024" height="60"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -531,6 +573,28 @@ You can also keep using the iPad, don't worry, you'll get a notification just be
                                 </state>
                                 <connections>
                                     <action selector="showGuideNextPress:" destination="eCN-qk-fJ4" eventType="touchUpInside" id="VwD-A9-MBF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="172.16.10.1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8NV-Q4-bh5">
+                                <rect key="frame" x="83" y="284" width="161" height="30"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDL-Tp-A6p">
+                                <rect key="frame" x="252" y="284" width="97" height="30"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-Ct-5uz">
+                                <rect key="frame" x="357" y="284" width="100" height="30"/>
+                                <state key="normal" title="Change API">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeAPIButtonPress:" destination="eCN-qk-fJ4" eventType="touchUpInside" id="gtO-on-D40"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-Sa-dbu">
@@ -690,31 +754,10 @@ Cg
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="172.16.10.1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8NV-Q4-bh5">
-                                <rect key="frame" x="83" y="284" width="161" height="30"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDL-Tp-A6p">
-                                <rect key="frame" x="252" y="284" width="97" height="30"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-Ct-5uz">
-                                <rect key="frame" x="357" y="284" width="100" height="30"/>
-                                <state key="normal" title="Change API">
-                                    <color key="titleColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeAPIButtonPress:" destination="eCN-qk-fJ4" eventType="touchUpInside" id="gtO-on-D40"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="540" height="620"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -725,7 +768,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHS-qu-f5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="-922"/>
+            <point key="canvasLocation" x="-1517" y="-798"/>
         </scene>
         <!--Administration View Controller-->
         <scene sceneID="tQn-Gb-VZG">
@@ -771,6 +814,83 @@ Cg
             </objects>
             <point key="canvasLocation" x="998" y="-1299"/>
         </scene>
+        <!--Startup View Controller-->
+        <scene sceneID="ppe-BQ-Ljs">
+            <objects>
+                <viewController storyboardIdentifier="setupView" id="HCX-TM-HBz" customClass="StartupViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xa1-df-fi6"/>
+                        <viewControllerLayoutGuide type="bottom" id="hCk-hz-3fy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VhD-An-t1g">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nmi-fZ-mjw">
+                                <rect key="frame" x="0.0" y="627" width="1024" height="141"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="WhatRUDoingBanner.png" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-nh-LMH">
+                                <rect key="frame" x="20" y="650" width="386" height="95"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-AS-but">
+                                <rect key="frame" x="0.0" y="21" width="1024" height="44"/>
+                                <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="What are you doing?" id="6Ki-92-g81">
+                                        <barButtonItem key="rightBarButtonItem" image="glyphicons_136_cogwheel.png" id="dwg-VJ-t5n">
+                                            <color key="tintColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="eCN-qk-fJ4" kind="popover" popoverAnchorBarButtonItem="dwg-VJ-t5n" id="EB3-Ij-l5c">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCd-B2-pcO">
+                                <rect key="frame" x="405" y="337" width="215" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" animates="NO" id="kap-cB-Z8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vos-TT-e26">
+                                <rect key="frame" x="405" y="229" width="215" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" red="0.98823529409999999" green="0.46666666670000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Set Up">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G8G-ij-0ag" kind="modal" animates="NO" id="UuV-VC-eyR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="startHere.png" translatesAutoresizingMaskIntoConstraints="NO" id="I4n-KZ-Ti1">
+                                <rect key="frame" x="101" y="215" width="296" height="107"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="resumeButtonOutlet" destination="UCd-B2-pcO" id="gqn-kq-CNd"/>
+                        <outlet property="setupButtonOutlet" destination="vos-TT-e26" id="xYT-aa-fCK"/>
+                        <outlet property="startHereOutlet" destination="I4n-KZ-Ti1" id="WVx-Ci-wmg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCy-xh-sVu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1540" y="91"/>
+        </scene>
     </scenes>
     <resources>
         <image name="LL_Fade_SPOKE.png" width="540" height="620"/>
@@ -778,7 +898,6 @@ Cg
         <image name="WhatRUDoingBanner.png" width="728" height="179"/>
         <image name="background.png" width="1024" height="1024"/>
         <image name="glyphicons_136_cogwheel.png" width="24" height="24"/>
-        <image name="glyphicons_203_lock.png" width="21" height="26"/>
         <image name="pickOne.png" width="649" height="236"/>
         <image name="startHere.png" width="649" height="236"/>
     </resources>
@@ -791,7 +910,8 @@ Cg
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bEO-Hy-xsN"/>
-        <segue reference="IRU-nL-eyw"/>
+        <segue reference="fxe-B9-3HU"/>
+        <segue reference="YpW-Xg-IQk"/>
+        <segue reference="UuV-VC-eyR"/>
     </inferredMetricsTieBreakers>
 </document>

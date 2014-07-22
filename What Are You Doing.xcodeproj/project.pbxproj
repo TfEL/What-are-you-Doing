@@ -33,6 +33,7 @@
 		12780F9919692FE0004364E5 /* Time-Pyramid.png in Resources */ = {isa = PBXBuildFile; fileRef = 12780F9819692FE0004364E5 /* Time-Pyramid.png */; };
 		12780F9D19693177004364E5 /* StudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12780F9C19693177004364E5 /* StudentViewController.m */; };
 		12780FA019693183004364E5 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12780F9F19693183004364E5 /* TeacherViewController.m */; };
+		12A7FFD8197CCF770055CEBB /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A7FFD7197CCF770055CEBB /* StartupViewController.m */; };
 		12C5D1A5196FC0E20031CD80 /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C5D1A4196FC0E20031CD80 /* CountdownViewController.m */; };
 		12D2312C1978F2B30044A801 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D2312B1978F2B30044A801 /* background.png */; };
 		12F026C5197750AF006ACD16 /* pickOne@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F026C4197750AF006ACD16 /* pickOne@2x.png */; };
@@ -88,6 +89,8 @@
 		12780F9C19693177004364E5 /* StudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentViewController.m; sourceTree = "<group>"; };
 		12780F9E19693183004364E5 /* TeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherViewController.h; sourceTree = "<group>"; };
 		12780F9F19693183004364E5 /* TeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
+		12A7FFD6197CCF770055CEBB /* StartupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
+		12A7FFD7197CCF770055CEBB /* StartupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartupViewController.m; sourceTree = "<group>"; };
 		12C5D1A3196FC0E20031CD80 /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownViewController.h; sourceTree = "<group>"; };
 		12C5D1A4196FC0E20031CD80 /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownViewController.m; sourceTree = "<group>"; };
 		12D2312B1978F2B30044A801 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 		1253F20C196BB9BC00E4C7E0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				12A7FFD6197CCF770055CEBB /* StartupViewController.h */,
+				12A7FFD7197CCF770055CEBB /* StartupViewController.m */,
 				1270DD631965366B00EDA930 /* ViewController.h */,
 				1270DD641965366B00EDA930 /* ViewController.m */,
 				12780F9B19693177004364E5 /* StudentViewController.h */,
@@ -366,6 +371,7 @@
 				12C5D1A5196FC0E20031CD80 /* CountdownViewController.m in Sources */,
 				12009E7E197954EF0063E448 /* administrationViewController.m in Sources */,
 				12780FA019693183004364E5 /* TeacherViewController.m in Sources */,
+				12A7FFD8197CCF770055CEBB /* StartupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

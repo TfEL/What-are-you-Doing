@@ -78,7 +78,7 @@
     [defs synchronize];
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"homeView"];
+    UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"setupView"];
     [self presentViewController:vc animated:NO completion:nil];
 }
 
