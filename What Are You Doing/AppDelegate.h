@@ -43,4 +43,6 @@
 
 @property (nonatomic) bool *isLocked;
 
+@property (nonatomic) bool *hasAgreed;
+
 @end

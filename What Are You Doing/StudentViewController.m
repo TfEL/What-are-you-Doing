@@ -129,7 +129,7 @@
             id object = [NSJSONSerialization JSONObjectWithData:returnedData options:0 error:&error];
             // If there was nothing, fill the error...
             if(error) {
-                
+                [self displayComplicatedError:@"No Data"];
             }
             if([object isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *results = object;
@@ -149,17 +149,8 @@
                     NSLog(@"Received successfully: %@ : %@", success, message);
                     
                     if ([success isEqualToString:@"success"]) {
-                        
-                        NSUInteger lastTimerPassed = [AppDelegate.userDefaults integerForKey:@"lastTimerPassed"];
-                        
-                        lastTimerPassed++;
-                        
-                        [AppDelegate.userDefaults setInteger:lastTimerPassed forKey:@"lastTimerPassed"];
-                        
-                        NSLog(@"Timer Passed, next timer: %lu", (unsigned long)lastTimerPassed);
-                        
                         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                        UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"countdownView"];
+                        UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"homeView"];
                         [self presentViewController:vc animated:NO completion:nil];
                     } else {
                         NSString *errorMessage = [NSString stringWithFormat:@"%@", message];

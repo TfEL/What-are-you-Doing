@@ -29,6 +29,14 @@
     return self;
 }
 
+-(void)displayComplicatedError:(NSString*)errorMessage {
+    [[[UIAlertView alloc] initWithTitle:@"Set Up Error"
+                                message:errorMessage
+                               delegate:nil
+                      cancelButtonTitle:@"Try again"
+                      otherButtonTitles:nil] show];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -74,7 +82,7 @@ void errorNotification() {
         cleanedCodeReference = codeFieldReference.text;
     }
     
-    NSString *surveyCompleteEndpoint = @"exchange.php";
+    NSString *surveyCompleteEndpoint = @"setup_exchange.php";
     
     NSString *requestURL = [NSString stringWithFormat:@"%1@%2@?challenge=%3@", AppDelegate.apiBaseURL, surveyCompleteEndpoint, cleanedCodeReference];
     
@@ -98,7 +106,7 @@ void errorNotification() {
             id object = [NSJSONSerialization JSONObjectWithData:returnedData options:0 error:&error];
             // If there was nothing, fill the error...
             if(error) {
-                errorNotification();
+                [self displayComplicatedError:@"No Data"];
             }
             if([object isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *results = object;
@@ -106,8 +114,11 @@ void errorNotification() {
                 
                 NSString *returnCode = [results objectForKey:@"return"];
                 
+                
                 if ([returnCode isEqualToString:@"fail"]) {
-                    errorNotification();
+                    NSString *returnMessage = [results objectForKey:@"message"];
+                    
+                    [self displayComplicatedError:returnMessage];
                 } else {
                     
                     NSString *textOne = [results objectForKey:@"groupOneText"];
@@ -115,16 +126,7 @@ void errorNotification() {
                     NSString *textThree = [results objectForKey:@"groupThreeText"];
                     NSString *studentID = [results objectForKey:@"studentIdentification"];
                     
-                    NSString *timerOne = [results objectForKey:@"timerTimeOne"];
-                    NSString *timerTwo = [results objectForKey:@"timerTimeTwo"];
-                    NSString *timerThree = [results objectForKey:@"timerTimeThree"];
-                    NSString *timerFour = [results objectForKey:@"timerTimeFour"];
-                    NSString *timerFive = [results objectForKey:@"timerTimeFive"];
-                    NSString *timerSix = [results objectForKey:@"timerTimeSix"];
-                    NSString *timerSeven = [results objectForKey:@"timerTimeSeven"];
-                    NSString *timerEight = [results objectForKey:@"timerTimeEight"];
-                    NSString *timerNine = [results objectForKey:@"timerTimeNine"];
-                    NSString *timerTen = [results objectForKey:@"timerTimeTen"];
+                    NSString *nextTimer = [results objectForKey:@"nextTimer"];
                     
                     
                     AppDelegate.groupOneText = textOne;
@@ -145,20 +147,8 @@ void errorNotification() {
                     [AppDelegate.userDefaults setObject:textThree forKey:@"groupThreeText"];
                     // Anonym Student ID
                     [AppDelegate.userDefaults setObject:studentID forKey:@"studentIdentification"];
-                    // Saving values twice, for safety, or something...
-                    [AppDelegate.userDefaults setObject:timerOne forKey:@"TimerOne"];
-                    [AppDelegate.userDefaults setObject:timerTwo forKey:@"TimerTwo"];
-                    [AppDelegate.userDefaults setObject:timerThree forKey:@"TimerThree"];
-                    [AppDelegate.userDefaults setObject:timerFour forKey:@"TimerFour"];
-                    [AppDelegate.userDefaults setObject:timerFive forKey:@"TimerFive"];
-                    [AppDelegate.userDefaults setObject:timerSix forKey:@"TimerSix"];
-                    [AppDelegate.userDefaults setObject:timerSeven forKey:@"TimerSeven"];
-                    [AppDelegate.userDefaults setObject:timerEight forKey:@"TimerEight"];
-                    [AppDelegate.userDefaults setObject:timerNine forKey:@"TimerNine"];
-                    [AppDelegate.userDefaults setObject:timerTen forKey:@"TimerTen"];
-                    
-                    // Reset the timer count...
-                    [AppDelegate.userDefaults setObject:@"0" forKey:@"lastTimerPassed"];
+                    // Next Timer Time
+                    [AppDelegate.userDefaults setObject:nextTimer forKey:@"nextTimer"];
                     
                     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                     UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"setupCompleted"];
@@ -166,10 +156,10 @@ void errorNotification() {
                 }
                 
             } else {
-                errorNotification();
+                [self displayComplicatedError:@"No Data - JSON"];
             }
         } else {
-            errorNotification();
+            [self displayComplicatedError:@"No Data - Communication Error"];
         }
     }
     
@@ -180,5 +170,27 @@ void errorNotification() {
     [textField resignFirstResponder];
     return YES;
 }
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(textField==codeFieldReference || textField == codeFieldReference)
+    {
+        
+        NSCharacterSet *myCharSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"];
+        for (int i = 0; i < [string length]; i++)
+        {
+            unichar c = [string characterAtIndex:i];
+            if (![myCharSet characterIsMember:c])
+            {
+                return NO;
+            }
+        }
+        
+        return YES;
+    }
+    
+    return YES;
+}
+
 
 @end

@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    NSTimer *timer;
+}
 
-@property (strong, nonatomic) IBOutlet UIButton *studentButton;
-@property (strong, nonatomic) IBOutlet UIButton *teachMeOutlet;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *padlockButtonOutlet;
+// Outlet for countdown timer
+@property (weak, nonatomic) IBOutlet UILabel *countDownLabelOutlet;
 
-- (IBAction)padlockButton:(id)sender;
+// Not sure if we'll use this to pool the queue or not...
+- (IBAction)exitViewButtonPressed:(id)sender;
 
 @end

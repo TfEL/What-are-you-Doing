@@ -78,59 +78,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [userDefaults synchronize];
-    
-    if (countdownViewHasLoaded == (bool*)YES) {
-        NSLog(@"CountdownView was loaded, but not unloaded.");
-        if (countdownViewHasUnloaded == (bool*)YES) {
-            // Sending a local notification because this shouldn't
-            
-            UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-            localNotification.fireDate = [NSDate date];
-            localNotification.alertBody = [NSString stringWithFormat:@"Something didn't work! Come back to the app."];
-            
-            [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-        } else {
-            
-            NSUInteger lastTimer;
-            
-            NSTimer *theTimer;
-            
-            lastTimer = [userDefaults integerForKey:@"lastTimerPassed"];
-
-            if (lastTimer == 0) {
-                theTimer = [userDefaults objectForKey:@"TimerOne"];
-            } else if (lastTimer == 1) {
-                theTimer = [userDefaults objectForKey:@"TimerTwo"];
-            } else if (lastTimer == 2) {
-                theTimer = [userDefaults objectForKey:@"TimerThree"];
-            } else if (lastTimer == 3) {
-                theTimer = [userDefaults objectForKey:@"TimerFour"];
-            } else if (lastTimer == 4) {
-                theTimer = [userDefaults objectForKey:@"TimerFive"];
-            } else if (lastTimer == 5) {
-                theTimer = [userDefaults objectForKey:@"TimerSix"];
-            } else if (lastTimer == 6) {
-                theTimer = [userDefaults objectForKey:@"TimerSeven"];
-            } else if (lastTimer == 7) {
-                theTimer = [userDefaults objectForKey:@"TimerEight"];
-            } else if (lastTimer == 8) {
-                theTimer = [userDefaults objectForKey:@"TimerNine"];
-            } else if (lastTimer == 9) {
-                theTimer = [userDefaults objectForKey:@"TimerTen"];
-            }
-                
-            NSLog(@"CountdownView queue local notifications...");
-            UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-            localNotification.fireDate = theTimer;
-            localNotification.alertBody = [NSString stringWithFormat:@"Something didn't work! Come back to the app."];
-            
-            [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-            
-        }
-    } if (countdownViewHasUnloaded == (bool*)YES) {
-        NSLog(@"CountdownView was loaded, and unloaded.");
-    }
+    [userDefaults synchronize];    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -153,7 +101,7 @@
 
 - (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif {
     // Handle the notificaton when the app is running
-    NSLog(@"Recieved Notification %@",notif);
+    NSLog(@"Recieved Notification %@", notif);
 }
 
 @end

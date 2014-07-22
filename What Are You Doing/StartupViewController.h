@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface StartupViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *setupButtonOutlet;
 @property (weak, nonatomic) IBOutlet UIButton *resumeButtonOutlet;
 @property (weak, nonatomic) IBOutlet UIImageView *startHereOutlet;
+@property (weak, nonatomic) IBOutlet UIButton *endClassButtonOutlet;
+- (IBAction)endClassButton:(id)sender;
 
 @end

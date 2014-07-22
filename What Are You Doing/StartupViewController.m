@@ -18,7 +18,8 @@
 
 @implementation StartupViewController
 
-@synthesize setupButtonOutlet, resumeButtonOutlet, startHereOutlet;
+@synthesize setupButtonOutlet, resumeButtonOutlet, startHereOutlet, endClassButtonOutlet;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,12 +35,29 @@
     [[resumeButtonOutlet layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
     [[resumeButtonOutlet layer] setBorderWidth:2.0f];
     
+    [[endClassButtonOutlet layer] setCornerRadius:8.0f];
+    [[endClassButtonOutlet layer] setMasksToBounds:YES];
+    [[endClassButtonOutlet layer] setBorderColor:[UIColor colorWithRed:(128/255.0) green:(202/255.0) blue:(201/255.0) alpha:1].CGColor];
+    [[endClassButtonOutlet layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+    [[endClassButtonOutlet layer] setBorderWidth:1.0f];
+    
     if ([AppDelegate.setupCompleted isEqualToString:@"no"]) {
         resumeButtonOutlet.hidden = true;
         startHereOutlet.hidden = false;
     } else {
         resumeButtonOutlet.hidden = false;
+        setupButtonOutlet.hidden = true;
+        endClassButtonOutlet.hidden = false;
         startHereOutlet.hidden = true;
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    if (AppDelegate.hasAgreed == (bool*)NO) {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"PrereleaseAgreement"];
+        [self.navigationController pushViewController:vc animated:YES];
+        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 
@@ -48,14 +66,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)endClassButton:(id)sender {
+    AppDelegate.setupCompleted = @"no";
+    
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *dict = [defs dictionaryRepresentation];
+    
+    for (id key in dict) {
+        [AppDelegate.userDefaults removeObjectForKey:key];
+    }
+    [defs synchronize];
+    
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"setupView"];
+    [self presentViewController:vc animated:NO completion:nil];
 }
-*/
-
 @end
