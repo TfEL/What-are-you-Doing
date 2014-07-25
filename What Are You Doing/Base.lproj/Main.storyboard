@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="HCX-TM-HBz">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
@@ -516,7 +515,7 @@ Tap done to go to the home menu.</string>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cW9-DH-Tmc">
                                 <rect key="frame" x="20" y="229" width="500" height="313"/>
-                                <mutableString key="text">This software is the property of the Government of South Australia. Unauthorised use or reproduction is prohibited; and in violation of Australian and International intellectual property laws.
+                                <string key="text">This software is the property of the Government of South Australia. Unauthorised use or reproduction is prohibited; and in violation of Australian and International intellectual property laws.
 
 Users of this software are under nondisclosure agreement between 'yourself' and 'the Department for Education and Child Development' (hereinafter; DECD).
 
@@ -530,7 +529,7 @@ DECD is committed to the principle that data required for a government employee 
 
 DECD classifies information assets in accordance with the whole of Government Information Security Management Framework (ISMF). Where data has been explicitly classified at a higher level of confidentiality (In Confidence, Protected or Highly Protected) then appropriate authorisation is required prior to provision and use of this data. All staff members are responsible for maintaining the security and confidentiality of information to which they have access and/or for which they are custodian, and must keep appropriate records relating to provision of access (refer to 5. Freedom of Information).
 
-All information assets which are yet to be classified are to be treated as potentially Protected or Highly Protected and access to such information must be authorised by the Business Owner.</mutableString>
+All information assets which are yet to be classified are to be treated as potentially Protected or Highly Protected and access to such information must be authorised by the Business Owner.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -665,7 +664,7 @@ All information assets which are yet to be classified are to be treated as poten
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kap-cB-Z8V"/>
+        <segue reference="akh-PF-Cpu"/>
         <segue reference="JX3-ci-oU5"/>
         <segue reference="UuV-VC-eyR"/>
     </inferredMetricsTieBreakers>
